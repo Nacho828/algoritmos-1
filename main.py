@@ -1,7 +1,9 @@
 from MovementRules import MovementRules
 from PossibilityCalculator import PossibilityCalculator
 from TableGenerator import TableGenerator
-
+from SolucionadorNReinas import SolucionadorNReinas
+from Visualizador import Visualizador
+from Tablero import Tablero
 def lanzador():
     # Definimos las reglas de movimiento para un teclado numérico 3x3
     valid_moves = {
@@ -25,3 +27,12 @@ def lanzador():
 
 if __name__ == "__main__":
     lanzador()
+
+
+if __name__ == "__main__":
+    n = 8  # Cambia este valor para probar con diferentes tamaños de tablero
+    solucionador = SolucionadorNReinas(n)
+    soluciones = solucionador.resolver()
+
+    print(f"Se encontraron {len(soluciones)} soluciones para un tablero de {n}x{n}.")
+    Visualizador.mostrar_soluciones(soluciones)
