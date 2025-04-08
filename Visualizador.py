@@ -28,3 +28,18 @@ class SolucionadorNReinas:
                 self.tablero.colocar_reina(col, fila)
                 self._backtrack(col + 1)
                 self.tablero.quitar_reina(col)
+
+
+class Visualizador:
+    @staticmethod
+    def mostrar_soluciones(soluciones):
+        """
+        Muestra las soluciones en formato visual.
+        """
+        for idx, solucion in enumerate(soluciones, start=1):
+            print(f"Solución {idx}:")
+            for fila in solucion:
+                linea = ['.'] * len(solucion)
+                linea[fila] = 'Q'
+                print(' '.join(linea))
+            print("\n")

@@ -3,7 +3,6 @@ from PossibilityCalculator import PossibilityCalculator
 from TableGenerator import TableGenerator
 from SolucionadorNReinas import SolucionadorNReinas
 from Visualizador import Visualizador
-from Tablero import Tablero
 def lanzador():
     # Definimos las reglas de movimiento para un teclado numérico 3x3
     valid_moves = {
